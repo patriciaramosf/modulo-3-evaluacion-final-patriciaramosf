@@ -5,7 +5,7 @@ const CharacterCard =(props)=>{
     return(
         <div className="CharacterCard">
             <div className="CharacterCard__Photo">
-                <img className="chPhoto" src={chPhoto}></img>
+                <img alt={chName} className="chPhoto" src={chPhoto}></img>
             </div>
             <div className="CharacterCard__Info">
                 <h2 className="chName">{chName}</h2>

@@ -1,6 +1,7 @@
 import React from 'react';
 import CharacterList from './CharacterList.js'
 import Header from './designStructure/Header.js';
+import Filter from './Filter.js';
 import Footer from './designStructure/Footer.js';
 import fetchData from '../services/Fetch';
 import '../stylesheets/App.scss';
@@ -9,8 +10,10 @@ import '../stylesheets/App.scss';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.handleInputValue=this.handleInputValue.bind(this)
     this.state={
-      totalData:[]
+      totalData:[],
+      inputValue:''
     }
   }
 
@@ -22,12 +25,21 @@ class App extends React.Component {
       });
     });
   }
+  handleInputValue(inputValue){
+    this.setState({
+      inputValue: inputValue
+    })
+  }
 
   render() {
     return (
       <div className="App">
         <Header/>
-          <CharacterList totalData={this.state.totalData}
+          <Filter handleInputValue={this.handleInputValue}
+                  inputValue={this.state.inputValue}
+          />
+          <CharacterList  totalData={this.state.totalData}
+                          inputValue={this.state.inputValue}
           />
         <Footer/>
       </div>

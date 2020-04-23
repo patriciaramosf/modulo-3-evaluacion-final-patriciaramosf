@@ -5,7 +5,9 @@ const CharacterList =(props)=>{
    const {totalData}= props;
     return(
         <ul className="CharacterList"> 
-            {totalData.map(characterObj=>
+            {totalData
+             .filter(characterObj=>characterObj.name.toLowerCase().includes(props.inputValue.toLowerCase()))
+            .map(characterObj=>
             <li key={characterObj.id}>
                 <CharacterCard  chPhoto={characterObj.image}
                                 chName={characterObj.name}
