@@ -20,6 +20,12 @@ class App extends React.Component {
   }
 
   componentDidMount(){
+   const localData = JSON.parse(localStorage.getItem('dataInput'));
+    if(localData !== null){
+      this.setState({
+        inputValue:localData
+      })
+    }
     fetchData()
     .then(data=>{
       this.setState({
@@ -27,6 +33,11 @@ class App extends React.Component {
       });
     });
   }
+
+  componentDidUpdate(){
+    localStorage.setItem('dataInput', JSON.stringify(this.state.inputValue));
+
+}
   handleInputValue(inputValue){
     this.setState({
       inputValue: inputValue

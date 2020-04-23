@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 const CharacterCard =(props)=>{
-
     const {chPhoto, chName, chSpecies, chGender, chStatus, chDetails, chId } = props;
     return(
         <div className="CharacterCard">
