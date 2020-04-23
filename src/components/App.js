@@ -1,16 +1,18 @@
 import React from 'react';
-import CharacterList from './CharacterList.js'
 import Header from './designStructure/Header.js';
 import Filter from './Filter.js';
+import CharacterList from './CharacterList.js'
+import CharacterDetails from './CharacterDetails.js'
 import Footer from './designStructure/Footer.js';
 import fetchData from '../services/Fetch';
 import '../stylesheets/App.scss';
-/* import { Link, Route, Switch } from 'react-router-dom'; */
+import {Link, Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleInputValue=this.handleInputValue.bind(this)
+    this.showDetails=this.showDetails.bind(this)
     this.state={
       totalData:[],
       inputValue:''
@@ -30,18 +32,35 @@ class App extends React.Component {
       inputValue: inputValue
     })
   }
+  showDetails(props){
+    const urlId = props.match.params.id;
+    const detailsObjects = this.state.totalData
+    for(let detail of detailsObjects){
+      if(detail.id === parseInt(urlId)){
+        return <CharacterDetails  detailObj={detail}
+              />
+      }
+    }
+
+  }
 
   render() {
+    const {totalData, inputValue} = this.state;
     return (
       <div className="App">
-        <Header/>
-          <Filter handleInputValue={this.handleInputValue}
-                  inputValue={this.state.inputValue}
-          />
-          <CharacterList  totalData={this.state.totalData}
-                          inputValue={this.state.inputValue}
-          />
-        <Footer/>
+        <Switch>
+          <Route exact path='/'>
+            <Header/>
+              <Filter handleInputValue={this.handleInputValue}
+                      inputValue={inputValue}
+              />
+              <CharacterList  totalData={totalData}
+                              inputValue={inputValue}
+              />
+            <Footer/>
+          </Route>
+          <Route path='/character/:id' render={this.showDetails}/>
+        </Switch>
       </div>
     );
   }

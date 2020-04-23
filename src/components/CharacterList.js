@@ -8,14 +8,17 @@ const CharacterList =(props)=>{
             {totalData
              .filter(characterObj=>characterObj.name.toLowerCase().includes(props.inputValue.toLowerCase()))
             .map(characterObj=>
-            <li key={characterObj.id}>
-                <CharacterCard  chPhoto={characterObj.image}
-                                chName={characterObj.name}
-                                chSpecies={characterObj.species}
-                                chGender={characterObj.gender}
-                                chStatus={characterObj.status}
-                />
-            </li>
+                <li key={characterObj.id}>
+                    <CharacterCard  chPhoto={characterObj.image}
+                                    chName={characterObj.name}
+                                    chSpecies={characterObj.species}
+                                    chGender={characterObj.gender}
+                                    chStatus={characterObj.status}
+                                    chDetails='More details'
+                                    chId={characterObj.id}
+                    />
+                </li>
+            
                 )} 
         </ul>
     )

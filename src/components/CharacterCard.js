@@ -1,7 +1,8 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 const CharacterCard =(props)=>{
 
-    const {chPhoto, chName, chSpecies, chGender, chStatus } = props;
+    const {chPhoto, chName, chSpecies, chGender, chStatus, chDetails, chId } = props;
     return(
         <div className="CharacterCard">
             <div className="CharacterCard__Photo">
@@ -14,7 +15,9 @@ const CharacterCard =(props)=>{
                     <li>Gender:{chGender}</li>
                     <li>Status:{chStatus}</li>
                 </ul>
-                <p className="moreInfo">More details...</p>
+                <Link to={`/character/${chId}`}>
+               <p className="moreInfo">{chDetails}</p>
+               </Link>
             </div>
         </div>
     )
