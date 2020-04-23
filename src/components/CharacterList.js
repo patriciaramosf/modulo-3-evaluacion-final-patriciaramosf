@@ -26,3 +26,11 @@ const CharacterList =(props)=>{
     )
             }
 export default CharacterList;
+
+/* const { isEditMode } = this.state;
+
+return isEditMode ? (
+  <p>Editing mode is ON ...</p>
+) : (
+  <p>Editing mode is OFF ...</p>
+); */
