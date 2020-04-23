@@ -1,8 +1,9 @@
 import React from 'react';
-const CharacterError =()=>{
+import { checkPropTypes } from 'prop-types';
+const CharacterError =(props)=>{
     return(
         <div className="CharacterError">
-             <p>ERROR, ESTE PERSONAJE NO EXISTE</p>
+             <p>{`ERROR, ESTE PERSONAJE ${props.inputValue} NO EXISTE`}</p>
         </div>
     )
 }

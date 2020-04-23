@@ -4,6 +4,7 @@ import { checkPropTypes } from 'prop-types';
 const Filter =(props)=>{
 const{handleInputValue, inputValue}=props
 const handleInputChange=(event)=> handleInputValue(event.currentTarget.value)
+const handleSubmit=(event)=> event.preventDefault
     return(
         <div className="Filter">
             <label>BUSCADOR</label>
@@ -12,6 +13,7 @@ const handleInputChange=(event)=> handleInputValue(event.currentTarget.value)
                     name="input"
                     placeholder="Rick"
                     onChange={handleInputChange}
+                    onSubmit={handleSubmit}
             />
         </div>
     )

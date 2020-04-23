@@ -4,13 +4,15 @@ import CharacterError from './CharacterError.js'
 
 const CharacterList =(props)=>{
    const {totalData, inputValue}= props;
-   if(totalData.length===0){
-       return <CharacterError/>
+   console.log(totalData.length)
+  if(totalData.length===0){
+       return <CharacterError inputValue={inputValue}
+                />
    }else{
     return(
         <ul className="CharacterList"> 
             {totalData
-             .filter(characterObj=> inputValue === '' || characterObj.name.toLowerCase().includes(inputValue.toLowerCase()))
+             .filter(characterObj=> inputValue === '' ||characterObj.name.toLowerCase().includes(inputValue.toLowerCase()))
             .map(characterObj=>
                 <li key={characterObj.id}>
                     <CharacterCard  chPhoto={characterObj.image}
