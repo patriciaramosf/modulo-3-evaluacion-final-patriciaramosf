@@ -3,10 +3,11 @@ import Header from './designStructure/Header.js';
 import Filter from './Filter.js';
 import CharacterList from './CharacterList.js'
 import CharacterDetails from './CharacterDetails.js'
+import CharacterError from './CharacterError.js'
 import Footer from './designStructure/Footer.js';
 import fetchData from '../services/Fetch';
 import '../stylesheets/App.scss';
-import {Link, Route, Switch } from 'react-router-dom';
+import {Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class App extends React.Component {
               <CharacterList  totalData={totalData}
                               inputValue={inputValue}
               />
+              <CharacterError/>
             <Footer/>
           </Route>
           <Route path='/character/:id' render={this.showDetails}/>
