@@ -12,8 +12,7 @@ const CharacterCard =(props)=>{
                 <ul className="chInfo">
                     <li>Species:{chSpecies}</li>
                     <li>Gender:{chGender}</li>
-                    <li>Status:{chStatus}</li>
-                    <i className={`fas ${chStatus === "Alive" ? "fa-thumbs-up" : "fa-skull-crossbones"}`}></i>
+                    <li>Status:{chStatus}<i className={`fas ${chStatus === "Alive" ? "fa-thumbs-up" : "fa-skull-crossbones"}`}></i></li>
                 </ul>
                 <Link to={`/character/${chId}`}>
                <p className="moreInfo">{chDetails}</p>
