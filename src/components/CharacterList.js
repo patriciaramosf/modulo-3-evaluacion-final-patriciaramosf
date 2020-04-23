@@ -9,7 +9,7 @@ const CharacterList =(props)=>{
         .filter(characterObj=> inputValue === '' ||characterObj.name.toLowerCase().includes(inputValue.toLowerCase()));
 
             if(filteredData.length===0){
-              return <CharacterError inputValue={props.inputValue}
+              return <CharacterError inputValue={inputValue}
               />
             }else{
               return(
