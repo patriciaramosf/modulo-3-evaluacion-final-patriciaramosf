@@ -3,7 +3,6 @@ import Header from './designStructure/Header.js';
 import Filter from './Filter.js';
 import CharacterList from './CharacterList.js'
 import CharacterDetails from './CharacterDetails.js'
-import Footer from './designStructure/Footer.js';
 import fetchData from '../services/Fetch';
 import '../stylesheets/App.scss';
 import {Route, Switch } from 'react-router-dom';
@@ -68,7 +67,6 @@ class App extends React.Component {
               <CharacterList  totalData={totalData}
                               inputValue={inputValue}
               />
-            <Footer/>
           </Route>
           <Route path='/character/:id' render={this.showDetails}/>
         </Switch>
