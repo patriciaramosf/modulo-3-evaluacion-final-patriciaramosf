@@ -5,7 +5,7 @@ const CharacterError =(props)=>{
     return(
         <div className="CharacterError">
             <div className="ceGeneral">
-            <img className="ceImg" src={icon}></img>
+            <img alt="rick error" className="ceImg" src={icon}></img>
             <p className="ceText">{`ERROR, ${props.inputValue} doesn´t exist!`}</p>
 
             </div>

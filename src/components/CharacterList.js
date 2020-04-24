@@ -3,9 +3,10 @@ import CharacterCard from './CharacterCard.js';
 import CharacterError from './CharacterError.js'
 
 const CharacterList =(props)=>{
-   const {totalData, inputValue}= props;
+   const {totalData, inputValue,inputChecked}= props;
    const filteredData=[...totalData]
         .sort((a,b)=>a.name.localeCompare(b.name))
+        .filter(characterObj => !inputChecked || (inputChecked && characterObj.species === 'Human'))
         .filter(characterObj=> inputValue === '' ||characterObj.name.toLowerCase().includes(inputValue.toLowerCase()));
 
             if(filteredData.length===0){
