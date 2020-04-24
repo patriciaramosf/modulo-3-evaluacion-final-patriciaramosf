@@ -1,0 +1,14 @@
+.CharacterCard{
+    background-color: $yellowFilter;
+    height:300px;
+    width:200px;
+    border-radius: 20px;
+        .CharacterCard__Photo{
+            .chPhoto{
+                width:200px;
+                height:180px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+        }
+}

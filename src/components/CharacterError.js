@@ -3,7 +3,10 @@ import { checkPropTypes } from 'prop-types';
 const CharacterError =(props)=>{
     return(
         <div className="CharacterError">
-             <p>{`ERROR, ESTE PERSONAJE ${props.inputValue} NO EXISTE`}</p>
+            <div className="ceGeneraL">
+            <p>{`ERROR, EL PERSONAJE ${props.inputValue} NO EXISTE`}</p>
+            <img></img>
+            </div>
         </div>
     )
 }

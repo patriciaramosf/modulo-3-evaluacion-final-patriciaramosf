@@ -7,15 +7,18 @@ const handleInputChange=(event)=> handleInputValue(event.currentTarget.value)
 const handleSubmit=(event)=> event.preventDefault
     return(
         <div className="Filter">
-            <label>BUSCADOR</label>
-            <input  type="text"
-                    value={inputValue}
-                    name="input"
-                    placeholder="Rick"
-                    onChange={handleInputChange}
-                    onSubmit={handleSubmit}
-            />
-        </div>
+            <form className="FilterForm">
+                <input  type="text"
+                        value={inputValue}
+                        name="input"
+                        placeholder="Find your favourite character"
+                        onChange={handleInputChange}
+                        onSubmit={handleSubmit}
+                        className="inputForm"
+                />
+                <label><i class="fas fa-search"></i></label>
+            </form>
+            </div>
     )
 }
 export default Filter;
