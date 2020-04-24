@@ -17,9 +17,10 @@ const CharacterCard =(props)=>{
                 <Link to={`/character/${chId}`}>
                <p className="moreInfo">{chDetails}</p>
                </Link>
-               <div className="icon"><i className={`fas ${chStatus === "Alive" ? "fa-thumbs-up" : "fa-skull-crossbones"}`}></i></div>
+               <div className="icon"><i className={`fas ${chStatus === "Alive" ? "fa-chart-line" : "fa-skull-crossbones"}`}></i></div>
             </div>
         </div>
     )
 }
+
 export default CharacterCard;
