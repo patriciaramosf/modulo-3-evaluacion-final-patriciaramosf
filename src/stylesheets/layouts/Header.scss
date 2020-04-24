@@ -4,5 +4,8 @@
     padding-top:20px;
         .Header__image{
             width:350px;
+            @include forTablet{
+                width:550px;
+             }
         }
 }

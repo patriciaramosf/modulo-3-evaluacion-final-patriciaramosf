@@ -1,0 +1,94 @@
+.CharacterDetails__container{
+    position:relative;
+    .CharacterDetails{
+        z-index:1;
+        background:$blueRick;
+        border-radius: 20px;
+        width:350px;
+        height:250px;
+        position:absolute;
+        left:50%;
+        margin-left:-175px;
+        top:50%;
+        margin-top:125px;
+        display:flex;
+        font-size:$fontTextMobile;
+        -webkit-box-shadow: 0px 1px 1px 3px rgba(169, 169, 169, 0.5);
+        box-shadow: 0px 1px 1px 3px rgba(169, 169, 169, 0.5);
+        @include forTablet{
+            width:600px;
+            height:400px;
+            left:50%;
+            margin-left:-300px;
+            top:50%;
+            margin-top:200px;
+            font-size:$fontDetailTextTablet;
+        }
+            .CharacterDetails__Photo{
+                .cdPhoto{
+                    width:100%;
+                    height:100%;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                }
+            }
+            .CharacterDetails__Info{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding:10px;
+                @include forTablet{
+                    line-height: 45px;
+                }
+               .cdName{
+                   font-weight: bold;
+                   font-size:$fontTitleMobile;
+                   margin-top:35px;
+                   color:$yellowRick;
+                    @include forTablet{
+                        font-size:$fontDetailNameTablet;
+                    }
+               } 
+               .cdInfo{
+                    margin-top:20px;
+                    color:$blackRick;
+                    line-height: 15px;
+                    @include forTablet{
+                        line-height:25px;
+                    }
+                    li{
+                        margin-top:8px;
+                        .infoTitleDetail{
+                            font-weight: bold;
+                        }
+                    }
+               }
+            }
+            .backTo{
+                border-radius: 100%;
+                width:20px;
+                height:20px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                top:8px;
+                right:10px;
+                position:absolute;
+                background-color: $yellowRick;
+                @include forTablet{
+                    width:30px;
+                    height:30px;
+                }
+                    .fa-times{
+                        font-weight: bold;
+                        font-size:16px;
+                        color:$blueRick;
+                            @include forTablet{
+                                font-size:20px;
+                            }
+                    }
+
+            }
+    }
+}

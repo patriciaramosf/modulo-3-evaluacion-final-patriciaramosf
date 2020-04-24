@@ -10,12 +10,27 @@
                 margin-top:50px;
                 width:300px;
                 height:300px;
+                    @include forTablet{
+                        width:500px;
+                        height:500px;
+                        @include forDesktop{
+                            width:700px;
+                            height:700px;
+                        }
+                    }
             }
             .ceText{
                 margin-top:20px;
                 font-weight:bold;
                 font-size:22px;
-                color:$yellowRick
+                color:$yellowRick;
+                    @include forTablet{
+                        font-size:36px;
+                        margin-top:30px;
+                    }
+                    @include forDesktop{
+                        font-size:66px;
+                    }
             }
         }
 }

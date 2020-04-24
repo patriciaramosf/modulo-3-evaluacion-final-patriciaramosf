@@ -13,12 +13,19 @@
             border-radius: 10px;
             -webkit-box-shadow: 1px 3px 0px 0px rgba(251, 252, 116, 0.7);
             box-shadow: 1px 3px 0px 0px rgba(251, 252, 116, 0.7);
+                @include forTablet{
+                    width:300px;
+                }
                 .inputForm{
                     border:none;
                     height:25px;
                     border-radius: 40px;
                     font-size: 11px;
                     width:80%;
+                    @include forTablet{
+                        font-size:16px;
+                        height:45px;
+                    }
                 }
                 .fa-search{
                     color:$blueRick;

@@ -1,11 +1,17 @@
 /* responsive sizes */
 $Tablet:760px;
-$Desktop:1200px;
+$Desktop:968px;
 
 /* colors */
 $MainBackground:   linear-gradient(to top, #007adf 0%, #00ecbc 100%);
 $yellowRick: #fbfc74;
 $blueRick:#04a2b9;
 $blackRick:#232b2b;
-
+/* fonts */
 $fontFamily:'Rubik', sans-serif;
+$fontTitleMobile:14px;
+$fontTextMobile:12px;
+$fontTitleTablet:15px;
+$fontTextTablet:14px;
+$fontDetailNameTablet:26px;
+$fontDetailTextTablet:18px;

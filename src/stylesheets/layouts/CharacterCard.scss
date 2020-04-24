@@ -3,29 +3,44 @@
     height:300px;
     width:200px;
     border-radius: 20px;
-    font-size:12px;
+    font-size:$fontTextMobile;
     position:relative;
     -webkit-box-shadow: 0px 1px 1px 3px rgba(169, 169, 169, 0.5);
     box-shadow: 0px 1px 1px 3px rgba(169, 169, 169, 0.5);
+    @include forTablet{
+        height:320px;
+        width:220px;
+        font-size:$fontTextTablet;
+    }
         .CharacterCard__Photo{
             .chPhoto{
                 width:200px;
                 height:180px;
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
+                @include forTablet{
+                    width:220px;
+                    height:180px;
+                }
             }
         }
         .CharacterCard__Info{
             padding:10px;
                 .chName{
-                    font-size:14px;
+                    font-size:$fontTitleMobile;
                     font-weight: bold;
                     color:$blueRick;
                     text-align: center;
+                    @include forTablet{
+                       font-size:$fontTitleTablet;
+                    }
                 }
                 .chInfo{
                     margin-top:10px;
                     color:$blackRick;
+                    @include forTablet{
+                        margin-top:14px;
+                     }
                         li{
                             margin-top:8px;
                             .infoTitle{
@@ -38,6 +53,9 @@
                     color:darkgrey;
                     text-decoration: none;
                     font-weight: bold;
+                    @include forTablet{
+                        margin-top:16px;
+                    }
                 }
                 .icon{
                     position:absolute;
