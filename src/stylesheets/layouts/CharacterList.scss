@@ -2,3 +2,10 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 450px 450px 450px;
         margin-bottom:40px; */
+.CharacterList{
+        display: grid;
+        grid-column:1;
+        grid-row: 20;
+        grid-gap:15px;
+        justify-content: center;
+}

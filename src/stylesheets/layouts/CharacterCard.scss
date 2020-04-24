@@ -1,8 +1,10 @@
 .CharacterCard{
-    background-color: $yellowFilter;
+    background-color: $yellowRick;
     height:300px;
     width:200px;
     border-radius: 20px;
+    font-size:12px;
+    position:relative;
         .CharacterCard__Photo{
             .chPhoto{
                 width:200px;
@@ -10,5 +12,35 @@
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
             }
+        }
+        .CharacterCard__Info{
+            padding:10px;
+                .chName{
+                    font-size:14px;
+                    font-weight: bold;
+                    color:$blueRick;
+                    text-align: center;
+                }
+                .chInfo{
+                    margin-top:10px;
+                    color:$blackRick;
+                        li{
+                            margin-top:8px;
+                            .infoTitle{
+                                font-weight: bold;
+                            }
+                        }
+                }
+                .moreInfo{
+                    margin-top:8px; 
+                    color:darkgrey;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                .icon{
+                    position:absolute;
+                    right:20px;
+                    bottom:15px;
+                }
         }
 }

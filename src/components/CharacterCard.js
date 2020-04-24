@@ -10,13 +10,14 @@ const CharacterCard =(props)=>{
             <div className="CharacterCard__Info">
                 <h2 className="chName">{chName}</h2>
                 <ul className="chInfo">
-                    <li>Species:{chSpecies}</li>
-                    <li>Gender:{chGender}</li>
-                    <li>Status:{chStatus}<i className={`fas ${chStatus === "Alive" ? "fa-thumbs-up" : "fa-skull-crossbones"}`}></i></li>
+                    <li><span className="infoTitle">Species: </span>{chSpecies}</li>
+                    <li><span className="infoTitle">Gender: </span>{chGender}</li>
+                    <li><span className="infoTitle">Status: </span>{chStatus}</li>
                 </ul>
                 <Link to={`/character/${chId}`}>
                <p className="moreInfo">{chDetails}</p>
                </Link>
+               <div className="icon"><i className={`fas ${chStatus === "Alive" ? "fa-thumbs-up" : "fa-skull-crossbones"}`}></i></div>
             </div>
         </div>
     )

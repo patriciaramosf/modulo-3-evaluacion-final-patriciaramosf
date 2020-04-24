@@ -22,7 +22,7 @@ const CharacterList =(props)=>{
                                             chSpecies={characterObj.species}
                                             chGender={characterObj.gender}
                                             chStatus={characterObj.status}
-                                            chDetails='More details'
+                                            chDetails='More details...'
                                             chId={characterObj.id}
                             />
                         </li>
