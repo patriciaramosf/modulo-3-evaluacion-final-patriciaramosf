@@ -12,11 +12,9 @@ class App extends React.Component {
     super(props);
     this.handleInputValue=this.handleInputValue.bind(this)
     this.showDetails=this.showDetails.bind(this)
-    this.handleCheckValue=this.handleCheckValue.bind(this)
     this.state={
       totalData:[],
       inputValue:'',
-      inputChecked:false
     }
   }
 
@@ -44,13 +42,6 @@ class App extends React.Component {
       inputValue: inputValue
     })
   }
-  handleCheckValue(){
-    this.setState(prevState => {
-      return {
-        inputChecked: !prevState.inputChecked
-      }
-    })
-  }
   showDetails(props){
     const urlId = props.match.params.id;
     const detailsObjects = this.state.totalData
@@ -73,11 +64,9 @@ class App extends React.Component {
               <Filter handleInputValue={this.handleInputValue}
                       handleCheckValue={this.handleCheckValue}
                       inputValue={inputValue}
-                      inputChecked={inputChecked}
               />
               <CharacterList  totalData={totalData}
                               inputValue={inputValue}
-                              inputChecked={inputChecked}
               />
           </Route>
           <Route path='/character/:id' render={this.showDetails}/>

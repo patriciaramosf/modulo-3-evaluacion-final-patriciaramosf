@@ -20,24 +20,6 @@ const handleCheckAlien=()=>handleCheckValue()
                 />
                 <label><i class="fas fa-search"></i></label>
             </form>
-            <div className="checkFilter">
-                <div className="human">
-                    <label>Humans</label>
-                    <input  type="checkbox" 
-                            className="checkInput"
-                            onChange={handleCheck}
-                            checked={props.inputChecked}
-                    />
-                </div>
-                <div className="alien">
-                    <label>Aliens</label>
-                    <input  type="checkbox" 
-                            className="checkInput"
-                            onChange={handleCheckAlien}
-                            checked={props.inputChecked}
-                    />
-                </div>
-        </div>
             </div>
     )
 }
