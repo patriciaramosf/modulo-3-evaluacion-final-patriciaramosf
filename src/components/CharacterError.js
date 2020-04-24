@@ -1,11 +1,13 @@
 import React from 'react';
+import icon from '../images/mistake.png'
 import { checkPropTypes } from 'prop-types';
 const CharacterError =(props)=>{
     return(
         <div className="CharacterError">
-            <div className="ceGeneraL">
-            <p>{`ERROR, EL PERSONAJE ${props.inputValue} NO EXISTE`}</p>
-            <img></img>
+            <div className="ceGeneral">
+            <img className="ceImg" src={icon}></img>
+            <p className="ceText">{`ERROR, ${props.inputValue} doesn´t exist!`}</p>
+
             </div>
         </div>
     )

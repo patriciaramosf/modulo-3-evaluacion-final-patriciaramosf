@@ -1,5 +1,9 @@
+html{
+    background-color: black;
+}
 .App{
     height:100%;
-   background-image: url('../../images/sky.gif');
-   font-family: 'Rubik', sans-serif;
+   /* background-image: url('../../images/sky.gif'); */
+   background-color: black;
+   font-family: $fontFamily;
 }

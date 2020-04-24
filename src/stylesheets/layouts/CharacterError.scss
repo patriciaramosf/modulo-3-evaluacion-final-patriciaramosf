@@ -1,3 +1,22 @@
 .CharacterError{
-    height:100vh;
+    color:white;
+    height:80vh;
+    position:relative;
+        .ceGeneral{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .ceImg{
+                margin-top:50px;
+                width:300px;
+                height:300px;
+            }
+            .ceText{
+                margin-top:20px;
+                font-weight:bold;
+                font-size:22px;
+                color:$yellowRick
+            }
+        }
 }
