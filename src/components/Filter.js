@@ -2,11 +2,10 @@ import React from 'react';
 import { checkPropTypes } from 'prop-types';
 
 const Filter =(props)=>{
-const{handleInputValue, inputValue, handleCheckValue}=props
+const{handleInputValue, inputValue}=props
 const handleInputChange=(event)=> handleInputValue(event.currentTarget.value)
 const handleSubmit=(event)=> event.preventDefault
-const handleCheck=()=>handleCheckValue()
-const handleCheckAlien=()=>handleCheckValue()
+
     return(
         <div className="Filter">
             <form className="FilterForm">
@@ -18,7 +17,7 @@ const handleCheckAlien=()=>handleCheckValue()
                         onSubmit={handleSubmit}
                         className="inputForm"
                 />
-                <label><i class="fas fa-search"></i></label>
+                <label><i className="fas fa-search"></i></label>
             </form>
             </div>
     )

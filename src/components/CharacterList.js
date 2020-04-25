@@ -3,7 +3,7 @@ import CharacterCard from './CharacterCard.js';
 import CharacterError from './CharacterError.js'
 
 const CharacterList =(props)=>{
-   const {totalData, inputValue,inputChecked}= props;
+   const {totalData, inputValue}= props;
    const filteredData=[...totalData]
         .sort((a,b)=>a.name.localeCompare(b.name))
         .filter(characterObj=> inputValue === '' ||characterObj.name.toLowerCase().includes(inputValue.toLowerCase()));
@@ -32,11 +32,3 @@ const CharacterList =(props)=>{
               }
         }
 export default CharacterList;
-
-/* const { isEditMode } = this.state;
-
-return isEditMode ? (
-  <p>Editing mode is ON ...</p>
-) : (
-  <p>Editing mode is OFF ...</p>
-); */

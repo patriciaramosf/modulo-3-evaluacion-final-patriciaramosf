@@ -21,7 +21,7 @@ const CharacterDetails =(props)=>{
                     </ul>
                 </div>
                 <Link to='/'>
-                    <div className="backTo"><i class="fas fa-times"></i></div>
+                    <div className="backTo"><i className="fas fa-times"></i></div>
                     </Link>
             </div>
             </div>

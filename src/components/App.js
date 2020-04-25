@@ -55,14 +55,13 @@ class App extends React.Component {
   }
 
   render() {
-    const {totalData, inputValue, inputChecked} = this.state;
+    const {totalData, inputValue} = this.state;
     return (
       <div className="App">
         <Switch>
           <Route exact path='/'>
             <Header/>
               <Filter handleInputValue={this.handleInputValue}
-                      handleCheckValue={this.handleCheckValue}
                       inputValue={inputValue}
               />
               <CharacterList  totalData={totalData}
