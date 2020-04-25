@@ -5,28 +5,56 @@
             display:flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
+            flex-direction: row-reverse;
             .ceImg{
-                margin-top:50px;
-                width:300px;
-                height:300px;
+                margin-top:60px;
+                margin-left:20px;
+                width:220px;
+                height:220px;
                     @include forTablet{
-                        width:500px;
-                        height:500px;
+                        width:340px;
+                        height:340px;
+                    }
+                    @include forDesktop{
+                        width:440px;
+                        height:440px;
                     }
             }
             .ceText{
-                margin-top:20px;
-                font-weight:bold;
-                font-size:22px;
+                font-weight: bold;
+                font-size:16px;
                 color:$yellowRick;
                     @include forTablet{
-                        font-size:36px;
-                        margin-top:30px;
+                        font-size:24px;
                     }
                     @include forDesktop{
-                        font-size:40px;
+                        font-size:34px;
                     }
-            }
+                }
+                    .blue{
+                        position:absolute;
+                        background-color: $blueRick;
+                        width:200px;
+                        height:60px;
+                        border-radius: 20px;
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        top:280.5px;
+                        right:100px;
+                        border:2px solid $yellowRick;
+                        @include forTablet{
+                            top:400px;
+                            right:260px;
+                            width:300px;
+                            height:90px;
+                        }
+                        @include forDesktop{
+                            top:500px;
+                            right:350px;
+                            width:400px;
+                            height:100px;
+                        }
+                    }
         }
 }
