@@ -2,7 +2,7 @@
 
 **API: https://rickandmortyapi.com**. 
 
-**Methodologies**
+**Used methods**
 
 - **Use of API with fetch method** : This web display the API of Rick and Morty
 
