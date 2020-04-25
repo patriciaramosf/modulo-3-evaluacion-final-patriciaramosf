@@ -1,6 +1,5 @@
 import React from 'react';
 import icon from '../images/mistake.png'
-import { checkPropTypes } from 'prop-types';
 const CharacterError =(props)=>{
     return(
         <div className="CharacterError">
