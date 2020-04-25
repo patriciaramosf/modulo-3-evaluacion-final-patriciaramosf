@@ -1,7 +1,7 @@
 **This responsive App was built with React.**
 
 **API: https://rickandmortyapi.com**. 
-**Methodologies**
+       **Methodologies**
 
 - **Use of API with fetch method** : This web display the API of Rick and Morty
 
