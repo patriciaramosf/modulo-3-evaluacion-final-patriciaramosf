@@ -5,19 +5,21 @@
             display:flex;
             align-items: center;
             justify-content: center;
-            flex-direction: row-reverse;
+            flex-direction: column-reverse;
             .ceImg{
                 margin-top:60px;
-                margin-left:20px;
+                margin-left:60px;
                 width:220px;
                 height:220px;
                     @include forTablet{
                         width:340px;
                         height:340px;
+                        margin-left:80px;
                     }
                     @include forDesktop{
                         width:440px;
                         height:440px;
+                        margin-left:90px;
                     }
             }
             .ceText{
@@ -32,7 +34,6 @@
                     }
                 }
                     .blue{
-                        position:absolute;
                         background-color: $blueRick;
                         width:200px;
                         height:60px;
@@ -40,18 +41,12 @@
                         display:flex;
                         justify-content: center;
                         align-items: center;
-                        top:280.5px;
-                        right:100px;
                         border:2px solid $yellowRick;
                         @include forTablet{
-                            top:400px;
-                            right:260px;
                             width:300px;
                             height:90px;
                         }
                         @include forDesktop{
-                            top:500px;
-                            right:350px;
                             width:400px;
                             height:100px;
                         }
